@@ -40,6 +40,7 @@ app.use('/resume', resumeRoute);
 app.use('/offer_letter', offerLetterRoute);
 app.use('/edit', getRoutes);
 
-app.listen(port, () => {
+app.listen(port, (req,res) => {
+    res.send("Hi");
     console.log(`server started on port ${port}!`);
 })
